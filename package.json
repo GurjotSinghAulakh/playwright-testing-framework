@@ -8,16 +8,16 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "pnpm -r --filter ./packages/** run build --if-present",
+    "build": "pnpm -r --filter \"./packages/**\" run build --if-present",
     "test": "pnpm test:api && pnpm test:e2e",
     "test:api": "pnpm run build && pnpm -C apps/api-tests test",
     "test:e2e": "pnpm run build && pnpm -C apps/e2e-tests test",
     "test:smoke": "pnpm -C apps/api-tests test -- --grep @smoke --pass-with-no-tests && pnpm -C apps/e2e-tests test -- --grep @smoke --pass-with-no-tests",
     "report:api": "pnpm -C apps/api-tests exec playwright show-report",
     "report:e2e": "pnpm -C apps/e2e-tests exec playwright show-report",
-    "typecheck": "pnpm -r --filter ./apps/** --filter ./packages/** run typecheck",
-    "lint": "pnpm -r --filter ./apps/** --filter ./packages/** run lint",
-    "lint:fix": "pnpm -r --filter ./apps/** --filter ./packages/** run lint -- --fix",
+    "typecheck": "pnpm -r --filter \"./apps/**\" --filter \"./packages/**\" run typecheck",
+    "lint": "pnpm -r --filter \"./apps/**\" --filter \"./packages/**\" run lint",
+    "lint:fix": "pnpm -r --filter \"./apps/**\" --filter \"./packages/**\" run lint -- --fix",
     "format": "prettier . --check",
     "format:fix": "prettier . --write"
   },
