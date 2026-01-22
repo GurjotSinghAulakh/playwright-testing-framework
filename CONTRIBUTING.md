@@ -179,4 +179,4 @@ Open an issue describing:
 This project follows the Contributor Covenant Code of Conduct.
 By participating, you agree to uphold respectful and inclusive behavior.
 
-See: [CODE_OF_CONDUCT.md](CONTRIBUTING.md)
+See: [Code of Conduct](CODE_OF_CONDUCT.md)
