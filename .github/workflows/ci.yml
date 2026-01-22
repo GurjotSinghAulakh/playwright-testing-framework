@@ -20,18 +20,20 @@ jobs:
         with:
           node-version: "20"
           cache: "pnpm"
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build packages
         run: pnpm run build
 
-      - name: Build config package
-        run: pnpm --filter @repo/config run build
-
-      - name: Build fixtures package
-        run: pnpm --filter @repo/fixtures run build
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-playwright-
 
       - name: Install Playwright browsers
         run: pnpm -C apps/e2e-tests exec playwright install --with-deps
