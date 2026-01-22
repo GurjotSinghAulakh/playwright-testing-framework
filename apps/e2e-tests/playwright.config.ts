@@ -12,7 +12,7 @@ export default defineConfig({
     timeout: 5_000
   },
   retries: isCI ? 2 : 0,
-  reporter: [["list"], ["html", { open: "never" }]],
+  reporter: [["list"], ["html", { open: isCI ? "never" : "always" }]],
   outputDir: "test-results",
   use: {
     baseURL: env.BASE_URL,
