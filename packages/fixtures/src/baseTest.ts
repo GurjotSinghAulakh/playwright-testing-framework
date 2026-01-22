@@ -1,5 +1,4 @@
 import { test as base, expect, type APIRequestContext } from "@playwright/test";
-
 import { getEnv } from "@repo/config";
 
 type Fixtures = {
@@ -11,10 +10,10 @@ type Fixtures = {
 const env = getEnv();
 
 export const test = base.extend<Fixtures>({
-  baseUrl: async ({}, use) => {
+  baseUrl: async (_, use) => {
     await use(env.BASE_URL);
   },
-  apiBaseUrl: async ({}, use) => {
+  apiBaseUrl: async (_, use) => {
     await use(env.API_BASE_URL);
   },
   api: async ({ request }, use) => {
