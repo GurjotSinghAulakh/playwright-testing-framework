@@ -1,0 +1,133 @@
+# .github/ISSUE_TEMPLATE/bug_report.yml
+
+name: Bug report
+about: Report a problem or unexpected behavior in the framework or example suites.
+title: "bug: "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## Thanks for reporting a bug!"
+  - type: markdown
+    attributes:
+      value: |
+        Please provide as much detail as possible so we can reproduce and fix it quickly.
+        **Tip:** Include Playwright trace/report details if available.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: "A clear and concise description of what the bug is."
+      placeholder: "When running `pnpm test:e2e`, the suite fails on..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: "What did you expect to happen?"
+      placeholder: "The tests should pass / the reporter should generate..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: "What actually happened? Include error messages if relevant."
+      placeholder: "The run fails with error: ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: "How do we trigger the bug? Provide step-by-step instructions."
+      value: |
+        1.
+        2.
+        3.
+      render: bash
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: "Where does the issue occur?"
+      options:
+        - API tests (apps/api-tests)
+        - E2E tests (apps/e2e-tests)
+        - Shared fixtures (packages/fixtures)
+        - API client (packages/api-client)
+        - Shared config (packages/config)
+        - Utils/helpers (packages/utils)
+        - CI / GitHub Actions
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      description: "Your operating system (e.g., macOS 14, Windows 11, Ubuntu 22.04)"
+      placeholder: "macOS 14.2"
+    validations:
+      required: true
+
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: "20.x"
+    validations:
+      required: true
+
+  - type: input
+    id: pm
+    attributes:
+      label: Package manager + version
+      description: "pnpm/npm/yarn and version"
+      placeholder: "pnpm 9.x"
+    validations:
+      required: true
+
+  - type: input
+    id: playwright
+    attributes:
+      label: Playwright version
+      placeholder: "1.4x.x"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots / Playwright report
+      description: |
+        Paste relevant logs and/or describe how to access the Playwright report/trace.
+        If you can share a trace, mention the path (e.g. `playwright-report/` or `test-results/`).
+      placeholder: "Paste logs here, add screenshots, or link to a Gist."
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Confirmation
+      description: "Please confirm the following:"
+      options:
+        - label: I have searched existing issues and this has not been reported yet.
+          required: true
+        - label: I can reproduce this issue consistently.
+          required: false
+        - label: I did not include any secrets (tokens, passwords, private URLs) in this report.
+          required: true
