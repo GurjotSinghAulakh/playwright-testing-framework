@@ -12,10 +12,11 @@ export default defineConfig({
     timeout: 5_000
   },
   retries: isCI ? 2 : 0,
-  reporter: [["list"], ["html", { open: isCI ? "never" : "always" }]],
+  reporter: [["list"], ["html", { outputFolder: "playwright-report", open: isCI ? "never" : "always" }]],
   outputDir: "test-results",
   use: {
     baseURL: env.API_BASE_URL,
-    trace: isCI ? "on-first-retry" : "off"
+    trace: "on-first-retry",
+    screenshot: "only-on-failure"
   }
 });
