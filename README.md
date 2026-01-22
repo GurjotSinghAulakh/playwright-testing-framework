@@ -309,7 +309,7 @@ Ways to contribute:
 - CI improvements
 - Framework enhancements (fixtures, reporting, test data)
 
-Please read `CONTRIBUTING.md` before submitting a PR.
+Please read [Contributing Guide](CONTRIBUTING.md) before submitting a PR.
 We recommend:
 - Small PRs
 - Clear commit messages
@@ -319,7 +319,7 @@ We recommend:
 
 If you discover a security issue:
 - Do **not** open a public issue with sensitive details.
-- Follow `SECURITY.md` to report responsibly.
+- Follow [Security Policy](SECURITY.md) to report responsibly.
 
 License
 
