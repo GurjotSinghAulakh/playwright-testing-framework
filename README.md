@@ -334,9 +334,11 @@ It keeps configs, dependencies, and execution patterns clean:
 - E2E tests can be heavier, run on merge/nightly
 
 **Can I use this in a separate repository that only contains tests?**
+
 Yes. The structure is designed so apps/* can be extracted into a standalone test repository if desired.
 
 **Why Playwright for API testing?**
+
 Playwright’s request context is stable, CI-friendly, and integrates well with its reporting and test runner.
 
 Happy testing 🚀
