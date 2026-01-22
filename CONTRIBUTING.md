@@ -1,4 +1,4 @@
-# CONTRIBUTING.md
+# Contributing Guide
 
 Thanks for your interest in contributing! 🎉  
 This project aims to be a scalable, modular Playwright testing framework for API + E2E testing. Contributions that improve maintainability, clarity, and real-world usability are especially welcome.
