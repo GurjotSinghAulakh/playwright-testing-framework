@@ -151,7 +151,7 @@ dcorepack prepare pnpm@latest --activate
 ## Clone & install
 
 ```bash
-git clone https://github.com/<your-username>/playwright-testing-framework.git
+git clone https://github.com/GurjotSinghAulakh/playwright-testing-framework.git
 cd playwright-testing-framework
 pnpm install
 pnpm exec playwright install
