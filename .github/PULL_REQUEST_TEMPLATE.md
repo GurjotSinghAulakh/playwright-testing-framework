@@ -1,27 +1,27 @@
-Pull Request Template
+# Pull Request Template
 
 ## Summary
-<!-- What does this PR do? Keep it short and clear. -->
+What does this PR do? Keep it short and clear.
 
 ## Motivation / Context
-<!-- Why is this change needed? Link issues if relevant. -->
-Closes: <!-- e.g. #123 -->
+Why is this change needed? Link issues if relevant.
+Closes: e.g. #123
 
 ## Changes
-<!-- Bullet list of the main changes. -->
+### Bullet list of the main changes.
 - 
 - 
 - 
 
 ## How to Test
-<!-- Commands and/or steps to verify the changes. -->
+Commands and/or steps to verify the changes.
 - [ ] `pnpm lint`
 - [ ] `pnpm typecheck`
 - [ ] `pnpm test:api`
 - [ ] `pnpm test:e2e` (or smoke)
 
 ## Evidence (Screenshots / Logs / Reports)
-<!-- Add Playwright report link, screenshots, logs, or traces if relevant. -->
+Add Playwright report link, screenshots, logs, or traces if relevant.
 
 ## Checklist
 - [ ] I ran relevant tests locally
