@@ -335,7 +335,7 @@ It keeps configs, dependencies, and execution patterns clean:
 
 **Can I use this in a separate repository that only contains tests?**
 
-Yes. The structure is designed so apps/* can be extracted into a standalone test repository if desired.
+Yes. The structure is designed so `apps/*` can be extracted into a standalone test repository if desired.
 
 **Why Playwright for API testing?**
 
