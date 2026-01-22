@@ -30,6 +30,9 @@ jobs:
       - name: Build config package
         run: pnpm --filter @repo/config run build
 
+      - name: Build fixtures package
+        run: pnpm --filter @repo/fixtures run build
+
       - name: Install Playwright browsers
         run: pnpm -C apps/e2e-tests exec playwright install --with-deps
 
