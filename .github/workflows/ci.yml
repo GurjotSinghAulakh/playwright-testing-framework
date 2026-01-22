@@ -25,7 +25,7 @@ jobs:
         run: pnpm install
 
       - name: Install Playwright browsers
-        run: pnpm exec playwright install --with-deps
+        run: pnpm -C apps/e2e-tests exec playwright install --with-deps
 
       - name: Typecheck
         run: pnpm typecheck
