@@ -12,5 +12,8 @@
     "@playwright/test": "^1.49.0",
     "@repo/config": "workspace:*",
     "@repo/fixtures": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.6"
   }
 }

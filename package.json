@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "pnpm -r --filter ./packages/** run build",
+    "build": "pnpm -r --filter ./packages/* run build",
     "test:api": "pnpm run build && pnpm -C apps/api-tests test",
     "test:e2e": "pnpm run build && pnpm -C apps/e2e-tests test",
     "typecheck": "pnpm -r --filter ./apps/** --filter ./packages/** run typecheck",
@@ -17,6 +17,7 @@
     "format:fix": "prettier . --write"
   },
   "devDependencies": {
+    "@types/node": "^20.17.6",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "eslint": "^9.14.0",

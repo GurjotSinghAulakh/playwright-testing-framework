@@ -17,11 +17,10 @@ export const test = base.extend<Fixtures>({
   apiBaseUrl: async ({}, use) => {
     await use(env.API_BASE_URL);
   },
-  api: async ({ request, apiBaseUrl }, use) => {
-    const apiContext = await request.newContext({ baseURL: apiBaseUrl });
-
-    await use(apiContext);
-    await apiContext.dispose();
+  api: async ({ request }, use) => {
+    // request fixture already handles baseURL via playwright config
+    // we just expose it as 'api' for convenience
+    await use(request);
   }
 });
 

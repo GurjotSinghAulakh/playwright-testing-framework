@@ -1,6 +1,11 @@
-import type { APIRequestContext, APIRequestOptions } from "@playwright/test";
+import type { APIRequestContext } from "@playwright/test";
 
-type RequestOptions = Omit<APIRequestOptions, "data">;
+type RequestOptions = {
+  headers?: Record<string, string>;
+  timeout?: number;
+  failOnStatusCode?: boolean;
+  ignoreHTTPSErrors?: boolean;
+};
 
 type HttpResponse<T> = {
   status: number;
