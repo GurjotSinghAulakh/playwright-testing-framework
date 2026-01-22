@@ -24,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build packages
+        run: pnpm run build
+
       - name: Install Playwright browsers
         run: pnpm -C apps/e2e-tests exec playwright install --with-deps
-
-      - name: Build packages
-        run: pnpm -r --filter ./packages/** run build
 
       - name: Typecheck
         run: pnpm typecheck
