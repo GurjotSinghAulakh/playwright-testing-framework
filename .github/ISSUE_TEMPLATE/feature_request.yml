@@ -1,0 +1,93 @@
+# .github/ISSUE_TEMPLATE/feature_request.yml
+
+name: Feature request
+about: Suggest an improvement or new capability for the framework.
+title: "feat: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## Thanks for suggesting an improvement!"
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the problem you're trying to solve and what you would like to see added/changed.
+        Clear scope = faster implementation.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: "What problem are you trying to solve? Why does it matter?"
+      placeholder: "Right now it's hard to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: "What do you want to happen? Be as specific as possible."
+      placeholder: "Add a shared fixture that..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope / area
+      description: "Which part of the repository is most affected?"
+      options:
+        - API tests (apps/api-tests)
+        - E2E tests (apps/e2e-tests)
+        - Shared fixtures (packages/fixtures)
+        - API client (packages/api-client)
+        - Shared config (packages/config)
+        - Utils/helpers (packages/utils)
+        - CI / GitHub Actions
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: "What alternatives have you considered, and why are they not ideal?"
+      placeholder: "Alternative could be..., but..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: "What does success look like? Provide bullet points if possible."
+      placeholder: |
+        - [ ] New feature works for both API and E2E suites
+        - [ ] Docs updated
+        - [ ] CI passes
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: "Links, examples, screenshots, references, or related issues."
+      placeholder: "Related issue: #..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Confirmation
+      description: "Please confirm the following:"
+      options:
+        - label: I have searched existing issues and this has not been requested yet.
+          required: true
+        - label: I understand this is an open-source project and timelines may vary.
+          required: false
