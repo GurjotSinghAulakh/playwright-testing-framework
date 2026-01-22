@@ -130,3 +130,16 @@ playwright-testing-framework/
 ├─ pnpm-workspace.yaml
 └─ tsconfig.base.json
 
+
+## Tech Stack
+
+- **Node.js:** 18+ (recommended 20+)
+- **TypeScript**
+- **Playwright**
+- **pnpm workspaces** (recommended for monorepos)
+
+## Optional (recommended):
+
+- **ESLint + Prettier**
+- **dotenv / env schema validation**
+- **GitHub Actions CI**
