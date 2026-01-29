@@ -23,6 +23,6 @@
     "lint": "eslint src --max-warnings=0"
   },
   "devDependencies": {
-    "@types/node": "^25.0.10"
+    "@types/node": "^25.1.0"
   }
 }
